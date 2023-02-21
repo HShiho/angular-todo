@@ -1,4 +1,4 @@
-import { Component, Init, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Task } from '../../models/task';
 
 @Component({
@@ -6,18 +6,18 @@ import { Task } from '../../models/task';
   templateUrl: './task-list-item.component.html',
   styleUrls: ['./task-list-item.component.scss']
 })
-export class TaskListItemComponent Implements OnInit {
+export class TaskListItemComponent implements OnInit {
 
   constructor() { }
- 
-  @Input() task;
- 
+
+  @Input() task!: Task;
+
   ngOnInit(): void {
   }
-  
+
   isOverdue(task: Task): boolean {
-    return !task.done && task.deadline.getTime() < (new Date()).setHours(0,0,0,0);
+    return !task.done && task.deadline.getTime() < (new Date()).setHours(0, 0, 0, 0);
   }
-   
-   
+
+
 }
