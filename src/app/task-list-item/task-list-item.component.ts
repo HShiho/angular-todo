@@ -15,13 +15,10 @@ export class TaskListItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  isTaskDeadline = '';
-
   isOverdue(task: Task): boolean {
     if(task.deadline == null){
-      task.deadline = new Date('')
     }
-    return !task.done && task.deadline.getTime() < (new Date()).setHours(0, 0, 0, 0);
+    return !task.done && task.deadline && task.deadline.getTime() < (new Date()).setHours(0, 0, 0, 0);
   }
 
 
