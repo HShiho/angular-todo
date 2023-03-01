@@ -12,7 +12,8 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NzPageHeaderModule } from 'ng-zerro-antd';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzListModule } from 'ng-zorro-antd/list';
 
 registerLocaleData(en);
 
@@ -29,6 +30,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzPageHeaderModule,
+    NzListModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
