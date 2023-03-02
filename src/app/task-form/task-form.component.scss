@@ -1,12 +1,14 @@
 .nz-input-group {
-  width: 40%;
-}
+  input {
+    width: 40%;
+  }
 
-.nz-date-picker {
-  width: 40%;
-}
+  nz-date-picker {
+    width: 40%;
+  }
 
-button {
-  margin-left: 3%;
-  width: 17%;
+  button {
+    margin-left: 3%;
+    width: 17%;
+  }
 }

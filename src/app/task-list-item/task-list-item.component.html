@@ -5,6 +5,6 @@
 </div>
 
 <div class="right">
-  <nz-tag ezColor="default" *ngIf="isOverdue(task)">期日超過</nz-tag>
-  <nz-tag nzColor="error" *ngIf="task.deadline" >（期日：{{ task.deadline|date:'yyyy/MM/dd' }}）</nz-tag>
+  <nz-tag ezColor="error" *ngIf="isOverdue(task)">期日超過</nz-tag>
+  <nz-tag nzColor="default" *ngIf="task.deadline" >（期日：{{ task.deadline|date:'yyyy/MM/dd' }}）</nz-tag>
 </div>
